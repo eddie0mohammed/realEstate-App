@@ -1,0 +1,298 @@
+
+.mainComponent{
+
+    /* background: pink; */
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+
+    /* background: yellow; */
+    display: flex;
+
+}
+
+.left{
+    width: 60%;
+    margin-right: 1rem;
+
+}
+
+.left__input{
+    width: 100%;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    
+   
+}
+
+.left__input:focus{
+    outline: none;
+}
+    
+
+.left__results{
+    font-size: 1rem;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+}
+
+.right{
+    width: 40%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.right__city{
+    /* margin-top: 0.5rem; */
+    
+    font-size: 1.5rem;
+    height: 4rem;
+    border:none;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
+    
+}
+
+.right__city:focus{
+    outline: none;
+}
+
+
+.right__second{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right__order{
+    height: 2.5rem;
+    width: 75%;
+    
+}
+.right__order:focus{
+    outline:none;
+}
+
+.right__second ion-icon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* MAIN CONTENT */
+
+.mainContent{
+
+    width: 100%;
+    /* background: lightgrey; */
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    width: 48%;
+    margin: 1rem 0;
+    /* background: red; */
+    height: 100%;
+    color: white;
+    border-radius: 5px;
+    
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+    
+}
+
+/* TOP PART */
+.card__top{
+    padding: 1rem;
+
+    background: lightcoral;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.content{
+
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    transition: all 0.2s ease-in-out;
+
+
+
+}
+
+.content__row{
+    width: 100%;
+    /* background:green; */
+    
+    display: flex;
+    
+    
+}
+
+.content__img{
+    width: 3.5rem;
+    height: 3.5rem;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid white;
+    /* margin-right: 1rem; */
+}
+
+.content__details{
+padding: 0 1rem;
+  
+}
+
+.name{
+    font-size: 1.4rem;
+    font-weight: 500;
+    
+}
+
+.date{
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.content__innerrow{
+    /* background: blue; */
+    padding: 1rem 0;
+    margin-left: 0.5rem;
+    
+    display: flex;
+    justify-content: space-around;
+    
+}
+.content__innerrow:not(:last-child){
+    margin-top: 1rem;
+}
+
+.text{
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: flex;
+}
+
+.text ion-icon{
+    font-size: 1.5rem;
+    align-self: center;
+    margin-right: 0.5rem;
+}
+
+.link{
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.card:hover .content{
+    opacity: 1;
+}
+
+.apartment{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* BOTTOM PART */
+.card__bottom{
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: white;
+}
+
+.cardBottom__price{
+    font-size: 1.4rem;
+    color: black;
+}
+
+.cardBottom__location{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    color: grey;
+
+}
+
+.city{
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+
+
+/* PAGINATION BAR */
+
+.paginationArea{
+    /* background: green; */
+    height: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.5rem;
+    
+    /* padding: 1rem; */
+}
+
+.bar{
+    
+    width: 80%;
+    background: white;
+    display: flex;
+
+    padding: 0.5rem;
+
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+   
+}
+
+.bar__numbers{
+
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.number{
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+.prev,
+.next{
+    width: 20%;
+    /* background: grey; */
+    text-align: center;
+    color: darkblue;
+    font-weight: 600;
+    align-self: center;
+}
+
+.active{
+    color: white;
+    background: lightcoral;
+    border-radius: 50%;
+    
+}

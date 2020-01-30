@@ -1,0 +1,20 @@
+
+.main{
+    width: 100%;
+    /* background: pink; */
+    height: calc(100vh - 6rem);
+    display: flex;
+}
+
+.filter{
+    width: 35%;
+    background: lightblue;
+    padding: 2rem 3rem 0 6rem;
+}
+
+.main__content{
+    width: 65%;
+    /* background: lightgoldenrodyellow; */
+
+    padding: 2rem;
+}

@@ -1,0 +1,130 @@
+
+.footer{
+    width: 100%;
+    height: 30rem;
+    background: black;
+    padding: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* FOOTER LEFT */
+
+.footer__left{
+
+    width: 30%;
+    height: 100%;
+    /* background:green; */
+}
+
+/* FOOTER CENTER */
+
+.footer__center{
+    width: 30%;
+    height: 100%;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+}
+
+.center__header{
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+
+}
+
+.center__text{
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: darkgray;
+    line-height: 1.5rem;
+
+}
+
+.button__container{
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.button{
+    display: flex;
+    align-items:center;
+    padding: 1rem 1.5rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom, rgb(230, 98, 120), rgb(196, 84, 103));
+    color: white;
+}
+
+.button ion-icon{
+    
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+
+
+.link__container{
+    margin-top: 1rem;
+    display: flex;
+    margin-bottom: auto;
+    
+}
+
+.link{
+  
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: white;
+  
+}
+
+.copyright{
+    font-weight: 600;
+    color: white;
+    
+}
+
+/* FOOTER RIGHT */
+.footer__right{
+    width: 30%;
+    height: 100%;
+    /* background:lightblue; */
+}
+
+.footer__right_header{
+    color: white;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer__right_header .footer__heading:nth-child(2){
+    margin-left: 3rem;
+}
+
+.footer__right_first{
+    margin-top: 1rem;
+    display: flex;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+}
+
+.footer__right_first .text:nth-child(2){
+    margin-left: 2rem;
+
+}
+
+.text{
+    padding: 3px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: darkgray;
+}

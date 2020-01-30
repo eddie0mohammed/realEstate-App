@@ -1,0 +1,31 @@
+
+.header{
+
+    background: rgb(1, 1, 78);
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 2rem 10rem;
+
+}
+
+.header__logo{
+    margin-right: auto;
+}
+
+.header__links{
+    display: flex;
+    align-items: center;
+}
+
+.header__link{
+    padding: 0 2rem;
+    font-weight: 600;
+}
+
+.header__register{
+    background-image: linear-gradient(to bottom, rgb(230, 98, 120), rgb(196, 84, 103));
+    padding: 0.5rem 2rem;
+    margin-left: 1rem;
+    border-radius: 3px;
+}

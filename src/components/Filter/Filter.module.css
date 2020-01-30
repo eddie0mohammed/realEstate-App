@@ -1,0 +1,88 @@
+
+.filter__container{
+
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+}
+
+.first__header{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.first__neighbourhood{
+    margin: 1rem 0;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+
+.first__neighbourhood:focus{
+    outline: none;
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+}
+
+.number__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* SECOND */
+
+.second{
+    margin-top: 1rem;
+}
+
+.second__header{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.second__input{
+    padding: 1rem 0;
+}
+
+.number__container{
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+}
+
+
+/* THIRD */
+
+.third{
+    margin-top: 3rem;
+}
+
+.third__header{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.elem__container{
+    margin-top: 1rem;
+    display: flex;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;;
+
+}
+
+.label{
+    font-size: 1.4rem;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.checkbox{
+    font-size: 2rem;
+
+}
