@@ -46,6 +46,9 @@ class Main extends React.Component{
         if (filters.bedrooms === 'All'){
             delete filters.bedrooms;
         }
+        if (filters.city === 'All'){
+            delete filters.city
+        }
   
         if (Object.keys(filters).length > 0){
             for (let key in filters){
@@ -57,10 +60,11 @@ class Main extends React.Component{
         if (Object.keys(filters).length !== 0){
 
             for (let key in filters){
-                if (key === 'valuePrice' || key === 'valueSqm' || key === 'valueRadius'){
+                if (key === 'price' || key === 'floorSpace' || key === 'radius'){
                     newData = newData.filter(elem => {
-                        return elem[key] <= filters[key];
+                        return parseInt(elem[key]) <= parseInt(filters[key])
                     });
+                    // console.log(elem[key]);
 
                 }else{
                     newData = newData.filter(elem => {
@@ -80,10 +84,35 @@ class Main extends React.Component{
 
     }
 
+    handleSort = (e) => {
+        let data = this.state.data;
+
+        if (e.target.value === 'descending'){
+            data.sort((a, b) => {
+                let dateA = new Date(a.postedDate);
+                let dateB = new Date(b.postedDate);
+
+                return dateB - dateA;
+            })
+        }else{
+            data.sort((a, b) => {
+                let dateA = new Date(a.postedDate);
+                let dateB = new Date(b.postedDate);
+
+                return dateA - dateB;
+            })
+        }
+        this.setState({
+            data: data
+        })
+
+    }
+
     render(){
 
         let filteredData = this.filterData(this.state.data, this.state.filters);
-        console.log(this.state.filters);
+        // console.log(this.state.filters);
+        // console.log(filteredData);
 
         return (
             <div className={styles.main}>
@@ -93,7 +122,7 @@ class Main extends React.Component{
                 </div>
 
                 <div className={styles.main__content}>
-                    <MainComponent data={filteredData}/>
+                    <MainComponent data={filteredData} handleChange={this.handleChange} sort={this.handleSort}/>
                 </div>
             </div>
         )

@@ -8,13 +8,13 @@ class Filter extends React.Component{
     state = {
         // minPrice: 0,
         maxPrice: 3000,
-        valuePrice: 0,
+        price: 0,
         // minSqm: 0,
         maxSqm: 2000,
-        valueSqm: 0,
+        floorSpace: 0,
         // minRadius: 0,
         maxRadius: 1000,
-        valueRadius: 0
+        radius: 0
 
     }
     
@@ -67,24 +67,24 @@ class Filter extends React.Component{
                 <div className={styles.second}>
                     
                     <h4 className={styles.second__header}>Price</h4>  
-                    <input type="range" name='price' className={styles.second__input} min='0' max={this.state.maxPrice} value={this.state.valuePrice} onChange={this.handleChange}/>
+                    <input type="range" name='price' className={styles.second__input} min='0' max={this.state.maxPrice} value={this.state.price} onChange={this.handleChange}/>
                     <div className={styles.number__container}>
                         <p className={styles.price__start}>$0</p>
-                        <p className={styles.price__end}>${this.state.valuePrice}</p>
+                        <p className={styles.price__end}>${this.state.price}</p>
                     </div>
 
                     <h4 className={styles.second__header}>Floor Space</h4>
-                    <input type="range" name="floorSpace" className={styles.second__input} min='0' max={this.state.maxSqm} onChange={this.handleChange}/>
+                    <input type="range" name="floorSpace" className={styles.second__input} min='0' max={this.state.maxSqm} value={this.state.floorSpace} onChange={this.handleChange}/>
                     <div className={styles.number__container}>
                         <p className={styles.price__start}>0 sqm</p>
-                        <p className={styles.price__end}>{this.state.valueSqm} sqm</p>
+                        <p className={styles.price__end}>{this.state.floorSpace} sqm</p>
                     </div>
 
                     <h4 className={styles.second__header}>Radius</h4>
-                    <input type="range" name="radius" className={styles.second__input} min='0' max={this.state.maxSqm} onChange={this.handleChange}/>
+                    <input type="range" name="radius" className={styles.second__input} min='0' max={this.state.maxSqm} value={this.state.radius} onChange={this.handleChange}/>
                     <div className={styles.number__container}>
                         <p className={styles.price__start}>0 Km</p>
-                        <p className={styles.price__end}>{this.state.valueRadius} Km</p>
+                        <p className={styles.price__end}>{this.state.radius} Km</p>
                     </div>
                 </div>
 

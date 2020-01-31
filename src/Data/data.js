@@ -34,7 +34,7 @@ export const data = [
         bedrooms: '2',
         price: '700',
         floorSpace: "580",
-        radius: '50',
+        radius: '60',
         furnished: 'unfurnished',
         // extras: [
         //     'storage',
@@ -48,10 +48,10 @@ export const data = [
         swimmingPool: false,
 
         placeName: 'Apartment Havenstraat',
-        city: "Rotterdam",
+        city: "Amsterdam",
         placeImg: 'https://r-cf.bstatic.com/images/hotel/max1024x768/514/51442093.jpg',
 
-        postedDate: '05/01/18',
+        postedDate: '05/02/18',
         postedBy: 'Marina Stefanova',
         personImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZFUVm9aD-B9rBYhnrog3_M4daO-WB8IZKdU8kcWvDVilmZ5Nj'
 
@@ -63,7 +63,7 @@ export const data = [
         bedrooms: '2',
         price: "700",
         floorSpace: "580",
-        radius: "50",
+        radius: "70",
         furnished: 'unfurnished',
         // extras: [
         //     'bathTup',
@@ -77,10 +77,10 @@ export const data = [
         swimmingPool: false,
 
         placeName: 'Apartment Havenstraat',
-        city: "Rotterdam",
+        city: "Virginia",
         placeImg: 'https://r-cf.bstatic.com/images/hotel/max1024x768/514/51442093.jpg',
 
-        postedDate: '05/01/18',
+        postedDate: '05/03/18',
         postedBy: 'Marina Stefanova',
         personImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZFUVm9aD-B9rBYhnrog3_M4daO-WB8IZKdU8kcWvDVilmZ5Nj'
 
@@ -92,8 +92,8 @@ export const data = [
         houseType: 'house',
         bedrooms: '3',
         price: "1200",
-        floorSpace: "580",
-        radius:"50",
+        floorSpace: "800",
+        radius:"80",
         furnished: 'unfurnished',
         // extras: [
         //     'separateShower',
@@ -110,7 +110,7 @@ export const data = [
         city: "Rotterdam",
         placeImg: 'https://r-cf.bstatic.com/images/hotel/max1024x768/514/51442093.jpg',
 
-        postedDate: '05/01/18',
+        postedDate: '05/04/18',
         postedBy: 'Marina Stefanova',
         personImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZFUVm9aD-B9rBYhnrog3_M4daO-WB8IZKdU8kcWvDVilmZ5Nj'
 
@@ -121,8 +121,8 @@ export const data = [
         houseType: 'house',
         bedrooms: '2',
         price: "1200",
-        floorSpace: "580",
-        radius: "50",
+        floorSpace: "1000",
+        radius: "90",
         furnished: 'unfurnished',
         // extras: [
         //     'fireplace',
@@ -136,10 +136,10 @@ export const data = [
         swimmingPool: true,
 
         placeName: 'Apartment Havenstraat',
-        city: "Rotterdam",
+        city: "Amsterdam",
         placeImg: 'https://r-cf.bstatic.com/images/hotel/max1024x768/514/51442093.jpg',
 
-        postedDate: '05/01/18',
+        postedDate: '05/05/18',
         postedBy: 'Marina Stefanova',
         personImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZFUVm9aD-B9rBYhnrog3_M4daO-WB8IZKdU8kcWvDVilmZ5Nj'
 
@@ -150,8 +150,8 @@ export const data = [
         houseType: 'house',
         bedrooms: '3',
         price: "1200",
-        floorSpace: "580",
-        radius: "50",
+        floorSpace: "1200",
+        radius: "100",
         furnished: 'unfurnished',
         // extras: [
         //     'elevators',
@@ -165,10 +165,10 @@ export const data = [
         swimmingPool: true,
 
         placeName: 'Apartment Havenstraat',
-        city: "Rotterdam",
+        city: "Virginia",
         placeImg: 'https://r-cf.bstatic.com/images/hotel/max1024x768/514/51442093.jpg',
 
-        postedDate: '05/01/18',
+        postedDate: '05/06/18',
         postedBy: 'Marina Stefanova',
         personImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZFUVm9aD-B9rBYhnrog3_M4daO-WB8IZKdU8kcWvDVilmZ5Nj'
 

@@ -74,17 +74,18 @@ class MainComponent extends React.Component{
 
                     <div className={styles.right}>
 
-                        <select name="city" className={styles.right__city}>
-                            <option value="City" className={styles.option}>City</option>
+                        <select name="city" className={styles.right__city} onChange={this.props.handleChange}>
+                            <option value="City" hidden className={styles.option}>City</option>
+                            <option value="All" className={styles.option}>All</option>
                             <option value="Rotterdam" className={styles.option}>Rotterdam</option>
                             <option value="Amsterdam" className={styles.option}>Amsterdam</option>
-                            <option value="Frankfurt" className={styles.option}>Frankfurt</option>
+                            <option value="Virginia" className={styles.option}>Virginia</option>
                         </select>
 
                         <div className={styles.right__second}>
-                            <select name="order" className={styles.right__order}>
+                            <select name="order" className={styles.right__order} onChange={this.props.sort}>
                                 <option value="ascending" className={styles.orderType}>Date Ascending</option>
-                                <option value="ascending" className={styles.orderType}>Date Descending</option>
+                                <option value="descending" className={styles.orderType}>Date Descending</option>
                             </select>
                             <ion-icon name="reorder" ></ion-icon>
                             <ion-icon name="apps" ></ion-icon>
