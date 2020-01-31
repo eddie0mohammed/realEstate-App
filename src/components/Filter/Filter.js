@@ -5,8 +5,29 @@ import styles from './Filter.module.css';
 
 class Filter extends React.Component{
 
+    state = {
+        // minPrice: 0,
+        maxPrice: 3000,
+        valuePrice: 0,
+        // minSqm: 0,
+        maxSqm: 2000,
+        valueSqm: 0,
+        // minRadius: 0,
+        maxRadius: 1000,
+        valueRadius: 0
+
+    }
+    
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+        this.props.handleChange(e);
+    } 
 
     render(){
+
+        // console.log(this.state.value)
 
         return (
             <div className={styles.filter__container}>
@@ -16,25 +37,27 @@ class Filter extends React.Component{
                     
                     <h4 className={styles.first__header}>Filter</h4>
 
-                    <select name="neighbourhood" className={styles.first__neighbourhood}>
-                        <option value="neighbourhood" default>Neighbourhood</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                    <select name="neighbourhood" className={styles.first__neighbourhood} onChange={this.props.handleChange} >
+                        <option value="neighbourhood"  hidden>Neighbourhood</option>
+                        <option value="All">Show all</option>
+                        <option value="Fremont">Fremont</option>
+                        <option value="Arlington">Arlington</option>
+                        <option value="Mclean">Mclean</option>
                     </select>
 
-                    <select name="houseType" className={styles.first__neighbourhood}>
-                        <option value="Type of House" default>Type of house</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                    <select name="houseType" className={styles.first__neighbourhood} onChange={this.props.handleChange}>
+                        <option value="Type of House" hidden>Type of place</option>
+                        <option value="All">Show all</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
                     </select>
 
-                    <select name="interior" className={styles.first__neighbourhood}>
-                        <option value="interior" default>Interior</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                    <select name="bedrooms" className={styles.first__neighbourhood} onChange={this.props.handleChange}>
+                        <option value="bedrooms" hidden># Bedrooms</option>
+                        <option value="All">Show all</option>
+                        <option value="1">1 Br</option>
+                        <option value="2">2 Br</option>
+                        <option value="3">3 Br</option>
                     </select>
 
 
@@ -44,24 +67,24 @@ class Filter extends React.Component{
                 <div className={styles.second}>
                     
                     <h4 className={styles.second__header}>Price</h4>  
-                    <input type="range" className={styles.second__input}/>
+                    <input type="range" name='price' className={styles.second__input} min='0' max={this.state.maxPrice} value={this.state.valuePrice} onChange={this.handleChange}/>
                     <div className={styles.number__container}>
                         <p className={styles.price__start}>$0</p>
-                        <p className={styles.price__end}>$1000</p>
+                        <p className={styles.price__end}>${this.state.valuePrice}</p>
                     </div>
 
                     <h4 className={styles.second__header}>Floor Space</h4>
-                    <input type="range" className={styles.second__input}/>
+                    <input type="range" name="floorSpace" className={styles.second__input} min='0' max={this.state.maxSqm} onChange={this.handleChange}/>
                     <div className={styles.number__container}>
                         <p className={styles.price__start}>0 sqm</p>
-                        <p className={styles.price__end}>1000 sqm</p>
+                        <p className={styles.price__end}>{this.state.valueSqm} sqm</p>
                     </div>
 
                     <h4 className={styles.second__header}>Radius</h4>
-                    <input type="range" className={styles.second__input}/>
+                    <input type="range" name="radius" className={styles.second__input} min='0' max={this.state.maxSqm} onChange={this.handleChange}/>
                     <div className={styles.number__container}>
                         <p className={styles.price__start}>0 Km</p>
-                        <p className={styles.price__end}>1000 Km</p>
+                        <p className={styles.price__end}>{this.state.valueRadius} Km</p>
                     </div>
                 </div>
 
@@ -72,32 +95,32 @@ class Filter extends React.Component{
 
                     <div className={styles.elem__container}>
                         <label htmlFor="elevator" className={styles.label}>Elevalor</label>
-                        <input type="checkbox" name="elevator" className={styles.checkbox}/>
+                        <input type="checkbox" name="elevator" className={styles.checkbox} onChange={this.props.handleChange}/>
                     </div>
 
                     <div className={styles.elem__container}>
                         <label htmlFor="storage" className={styles.label}>Storage</label>
-                        <input type="checkbox" name="storage" className={styles.checkbox}/>
+                        <input type="checkbox" name="storage" className={styles.checkbox} onChange={this.props.handleChange}/>
                     </div>
 
                     <div className={styles.elem__container}>
                         <label htmlFor="bathTub" className={styles.label}>Bath tub</label>
-                        <input type="checkbox" name="bathTub" className={styles.checkbox}/>
+                        <input type="checkbox" name="bathTub" className={styles.checkbox} onChange={this.props.handleChange}/>
                     </div>
 
                     <div className={styles.elem__container}>
                         <label htmlFor="separateShower" className={styles.label}>Separate shower</label>
-                        <input type="checkbox" name="separateShower" className={styles.checkbox}/>
+                        <input type="checkbox" name="separateShower" className={styles.checkbox} onChange={this.props.handleChange}/>
                     </div>
 
                     <div className={styles.elem__container}>
                         <label htmlFor="fireplace" className={styles.label}>Fireplace</label>
-                        <input type="checkbox" name="elevator" className={styles.checkbox}/>
+                        <input type="checkbox" name="fireplace" className={styles.checkbox} onChange={this.props.handleChange}/>
                     </div>
 
                     <div className={styles.elem__container}>
                         <label htmlFor="swimmingPool" className={styles.label}>Swimming pool</label>
-                        <input type="checkbox" name="swimmingPool" className={styles.checkbox}/>
+                        <input type="checkbox" name="swimmingPool" className={styles.checkbox} onChange={this.props.handleChange}/>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,60 @@ import styles from './MainComponent.module.css';
 class MainComponent extends React.Component{
 
 
+    renderCards = () => {
+        const {data} = this.props;
+
+        return data.map((elem, i) => {
+            return (
+                <div key={i} className={styles.card}>
+                        
+                        <div className={styles.card__top} style={{backgroundImage: `url(${elem.placeImg})`}}>
+                            <div className={styles.overlay}></div>
+                            <div className={styles.content}>
+
+                                <div className={styles.content__row}>
+                                    
+                                    <div className={styles.content__img} style={{backgroundImage: `url(${elem.personImg})`}}></div>
+                                    
+                                    <div className={styles.content__details}>
+                                        <p className={styles.name}>{elem.postedBy}</p>
+                                        <p className={styles.date}>Posted on {elem.postedDate}</p>
+                                    </div>
+
+                                </div>
+
+                                <div className={styles.content__innerrow}>
+                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> {elem.floorSpace} sqm</p>
+                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> {elem.furnished}</p>
+                                </div>
+
+                                <div className={styles.content__innerrow}>
+                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> {elem.bedrooms} BR</p>
+                                    <p className={styles.link}>viewmap</p>
+                                </div>
+
+                            </div>
+
+                            <p className={styles.apartment}>{elem.placeName}</p>
+
+                        </div>
+
+                        <div className={styles.card__bottom}>
+                            <p className={styles.cardBottom__price}>${elem.price} / month</p>
+                            <div className={styles.cardBottom__location}>
+                                <ion-icon name="pin"></ion-icon>
+                                <p className={styles.city}>{elem.city}</p>
+                            </div>
+                        </div>
+
+                    </div>
+            )
+        })
+    }
+
     render(){
+
+        // const {data} = this.props;
 
         return (
             <div className={styles.mainComponent}>
@@ -23,9 +76,9 @@ class MainComponent extends React.Component{
 
                         <select name="city" className={styles.right__city}>
                             <option value="City" className={styles.option}>City</option>
-                            <option value="City" className={styles.option}>Roterdam</option>
-                            <option value="City" className={styles.option}>Amsterdam</option>
-                            <option value="City" className={styles.option}>Frankfurt</option>
+                            <option value="Rotterdam" className={styles.option}>Rotterdam</option>
+                            <option value="Amsterdam" className={styles.option}>Amsterdam</option>
+                            <option value="Frankfurt" className={styles.option}>Frankfurt</option>
                         </select>
 
                         <div className={styles.right__second}>
@@ -43,264 +96,8 @@ class MainComponent extends React.Component{
 
                 <div className={styles.mainContent}>
 
-                    <div className={styles.card}>
+                    {this.renderCards()}
 
-                        <div className={styles.card__top}>
-
-                            <div className={styles.content}>
-
-                                <div className={styles.content__row}>
-                                    
-                                    <div className={styles.content__img}></div>
-                                    
-                                    <div className={styles.content__details}>
-                                        <p className={styles.name}>Marina Crevation</p>
-                                        <p className={styles.date}>Posted on 05/02/17</p>
-                                    </div>
-
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> 288 sqm</p>
-                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> unfurnished</p>
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> 288 sqm</p>
-                                    <p className={styles.link}>viewmap</p>
-                                </div>
-
-                            </div>
-
-                            <p className={styles.apartment}>Apartment Havenstraat</p>
-
-                        </div>
-
-                        <div className={styles.card__bottom}>
-                            <p className={styles.cardBottom__price}>$700 / month</p>
-                            <div className={styles.cardBottom__location}>
-                                <ion-icon name="pin"></ion-icon>
-                                <p className={styles.city}>Rotterdam</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div className={styles.card}>
-
-                        <div className={styles.card__top}>
-
-                            <div className={styles.content}>
-
-                                <div className={styles.content__row}>
-                                    
-                                    <div className={styles.content__img}></div>
-                                    
-                                    <div className={styles.content__details}>
-                                        <p className={styles.name}>Marina Crevation</p>
-                                        <p className={styles.date}>Posted on 05/02/17</p>
-                                    </div>
-
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> 288 sqm</p>
-                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> unfurnished</p>
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> 288 sqm</p>
-                                    <p className={styles.link}>viewmap</p>
-                                </div>
-
-                            </div>
-
-                            <p className={styles.apartment}>Apartment Havenstraat</p>
-
-                        </div>
-
-                        <div className={styles.card__bottom}>
-                            <p className={styles.cardBottom__price}>$700 / month</p>
-                            <div className={styles.cardBottom__location}>
-                                <ion-icon name="pin"></ion-icon>
-                                <p className={styles.city}>Rotterdam</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className={styles.card}>
-
-                        <div className={styles.card__top}>
-
-                            <div className={styles.content}>
-
-                                <div className={styles.content__row}>
-                                    
-                                    <div className={styles.content__img}></div>
-                                    
-                                    <div className={styles.content__details}>
-                                        <p className={styles.name}>Marina Crevation</p>
-                                        <p className={styles.date}>Posted on 05/02/17</p>
-                                    </div>
-
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> 288 sqm</p>
-                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> unfurnished</p>
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> 288 sqm</p>
-                                    <p className={styles.link}>viewmap</p>
-                                </div>
-
-                            </div>
-
-                            <p className={styles.apartment}>Apartment Havenstraat</p>
-
-                        </div>
-
-                        <div className={styles.card__bottom}>
-                            <p className={styles.cardBottom__price}>$700 / month</p>
-                            <div className={styles.cardBottom__location}>
-                                <ion-icon name="pin"></ion-icon>
-                                <p className={styles.city}>Rotterdam</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className={styles.card}>
-
-                        <div className={styles.card__top}>
-
-                            <div className={styles.content}>
-
-                                <div className={styles.content__row}>
-                                    
-                                    <div className={styles.content__img}></div>
-                                    
-                                    <div className={styles.content__details}>
-                                        <p className={styles.name}>Marina Crevation</p>
-                                        <p className={styles.date}>Posted on 05/02/17</p>
-                                    </div>
-
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> 288 sqm</p>
-                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> unfurnished</p>
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> 288 sqm</p>
-                                    <p className={styles.link}>viewmap</p>
-                                </div>
-
-                            </div>
-
-                            <p className={styles.apartment}>Apartment Havenstraat</p>
-
-                        </div>
-
-                        <div className={styles.card__bottom}>
-                            <p className={styles.cardBottom__price}>$700 / month</p>
-                            <div className={styles.cardBottom__location}>
-                                <ion-icon name="pin"></ion-icon>
-                                <p className={styles.city}>Rotterdam</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className={styles.card}>
-
-                        <div className={styles.card__top}>
-
-                            <div className={styles.content}>
-
-                                <div className={styles.content__row}>
-                                    
-                                    <div className={styles.content__img}></div>
-                                    
-                                    <div className={styles.content__details}>
-                                        <p className={styles.name}>Marina Crevation</p>
-                                        <p className={styles.date}>Posted on 05/02/17</p>
-                                    </div>
-
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> 288 sqm</p>
-                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> unfurnished</p>
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> 288 sqm</p>
-                                    <p className={styles.link}>viewmap</p>
-                                </div>
-
-                            </div>
-
-                            <p className={styles.apartment}>Apartment Havenstraat</p>
-
-                        </div>
-
-                        <div className={styles.card__bottom}>
-                            <p className={styles.cardBottom__price}>$700 / month</p>
-                            <div className={styles.cardBottom__location}>
-                                <ion-icon name="pin"></ion-icon>
-                                <p className={styles.city}>Rotterdam</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className={styles.card}>
-
-                        <div className={styles.card__top}>
-
-                            <div className={styles.content}>
-
-                                <div className={styles.content__row}>
-                                    
-                                    <div className={styles.content__img}></div>
-                                    
-                                    <div className={styles.content__details}>
-                                        <p className={styles.name}>Marina Crevation</p>
-                                        <p className={styles.date}>Posted on 05/02/17</p>
-                                    </div>
-
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="square-outline"></ion-icon> 288 sqm</p>
-                                    <p className={styles.text}><ion-icon name="pricetags"></ion-icon> unfurnished</p>
-                                </div>
-
-                                <div className={styles.content__innerrow}>
-                                    <p className={styles.text}><ion-icon name="bed"></ion-icon> 288 sqm</p>
-                                    <p className={styles.link}>viewmap</p>
-                                </div>
-
-                            </div>
-
-                            <p className={styles.apartment}>Apartment Havenstraat</p>
-
-                        </div>
-
-                        <div className={styles.card__bottom}>
-                            <p className={styles.cardBottom__price}>$700 / month</p>
-                            <div className={styles.cardBottom__location}>
-                                <ion-icon name="pin"></ion-icon>
-                                <p className={styles.city}>Rotterdam</p>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
 
 

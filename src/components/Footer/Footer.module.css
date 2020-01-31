@@ -15,7 +15,10 @@
 
     width: 30%;
     height: 100%;
-    /* background:green; */
+    background-image: url('../../img/phone.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
 
 /* FOOTER CENTER */
