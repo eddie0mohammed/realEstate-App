@@ -25,9 +25,60 @@ class Filter extends React.Component{
         this.props.handleChange(e);
     } 
 
+    renderNeighbouhood = () => {
+        const {originalData} = this.props;
+
+        let neighbourhoods = [];
+        originalData.forEach(elem => {
+            if (!neighbourhoods.includes(elem.neighbourhood)){
+                neighbourhoods.push(elem.neighbourhood);
+            }
+        });
+
+        return neighbourhoods.map(elem => {
+            return <option key={elem} value={elem}>{elem}</option>
+        })
+        
+    }
+
+    renderHouseType = () => {
+        const {originalData} = this.props;
+
+        let houseTypes = [];
+        originalData.forEach(elem => {
+            if (!houseTypes.includes(elem.houseType)){
+                houseTypes.push(elem.houseType);
+            }
+        });
+
+        return houseTypes.map(elem => {
+            return <option key={elem} value={elem}>{elem}</option>
+        })
+        
+    }
+
+    renderBedrooms = () => {
+        const {originalData} = this.props;
+
+        let bedrooms = [];
+        originalData.forEach(elem => {
+            if (!bedrooms.includes(elem.bedrooms)){
+                bedrooms.push(elem.bedrooms);
+            }
+        });
+
+        return bedrooms.map(elem => {
+            return <option key={elem} value={elem}>{elem}</option>
+        })
+        
+    }
+
+
+
     render(){
 
         // console.log(this.state.value)
+        
 
         return (
             <div className={styles.filter__container}>
@@ -40,24 +91,25 @@ class Filter extends React.Component{
                     <select name="neighbourhood" className={styles.first__neighbourhood} onChange={this.props.handleChange} >
                         <option value="neighbourhood"  hidden>Neighbourhood</option>
                         <option value="All">Show all</option>
-                        <option value="Fremont">Fremont</option>
-                        <option value="Arlington">Arlington</option>
-                        <option value="Mclean">Mclean</option>
+                        
+                        {this.renderNeighbouhood()}
+                        
                     </select>
 
                     <select name="houseType" className={styles.first__neighbourhood} onChange={this.props.handleChange}>
                         <option value="Type of House" hidden>Type of place</option>
                         <option value="All">Show all</option>
-                        <option value="house">House</option>
-                        <option value="apartment">Apartment</option>
+
+                        {this.renderHouseType()}
+                        
                     </select>
 
                     <select name="bedrooms" className={styles.first__neighbourhood} onChange={this.props.handleChange}>
                         <option value="bedrooms" hidden># Bedrooms</option>
                         <option value="All">Show all</option>
-                        <option value="1">1 Br</option>
-                        <option value="2">2 Br</option>
-                        <option value="3">3 Br</option>
+
+                        {this.renderBedrooms()}
+                        
                     </select>
 
 

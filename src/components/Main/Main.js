@@ -12,7 +12,11 @@ class Main extends React.Component{
 
     state = {
         data: data,
-        filters: {}
+        filters: {},
+
+        currentPage: 1,
+        postsPerPage: 6,
+        display: '1'
         
     }
 
@@ -66,6 +70,12 @@ class Main extends React.Component{
                     });
                     // console.log(elem[key]);
 
+                }else if (key === 'placeName'){
+                    newData = newData.filter(elem => {
+                        return elem[key].startsWith(filters[key]);
+                    })
+
+
                 }else{
                     newData = newData.filter(elem => {
                         return elem[key] === filters[key]
@@ -108,21 +118,47 @@ class Main extends React.Component{
 
     }
 
+     //change page
+        paginate = (number) => {
+            this.setState({
+            currentPage: number
+            });
+
+        }
+
+    displayChange = (e) => {
+        
+        let display = e.target.name === 'reorder' ? '0' : '1';
+        this.setState({
+            display: display
+        });
+    }
+
     render(){
 
         let filteredData = this.filterData(this.state.data, this.state.filters);
         // console.log(this.state.filters);
         // console.log(filteredData);
 
+        const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
+        const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
+        const currentPosts = filteredData.slice(indexOfFirstPost, indexOfLastPost);
+
+        // console.log(indexOfFirstPost);
+        // console.log(indexOfLastPost);
+        // console.log(currentPosts);
+
+        
+
         return (
             <div className={styles.main}>
 
                 <div className={styles.filter}>
-                    <Filter handleChange={this.handleChange}/>
+                    <Filter originalData={this.state.data} handleChange={this.handleChange}/>
                 </div>
 
                 <div className={styles.main__content}>
-                    <MainComponent data={filteredData} handleChange={this.handleChange} sort={this.handleSort}/>
+                    <MainComponent display={this.state.display} displayChange={this.displayChange} originalData={this.state.data} data={currentPosts} handleChange={this.handleChange} sort={this.handleSort} paginate={this.paginate} totalPosts={filteredData.length} postsPerPage={this.state.postsPerPage} currentPage={this.state.currentPage}/>
                 </div>
             </div>
         )

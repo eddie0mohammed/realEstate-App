@@ -1,0 +1,112 @@
+.contact{
+    /* height: 100vh; */
+}
+
+.header{
+    width: 100%;
+    height: 15rem;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.content{
+    /* height: 45rem; */
+    padding: 5rem 10rem;
+
+    display: flex;
+    /* background: pink; */
+}
+
+
+.left{
+    width: 50%;
+    height: 50%;
+    /* background-image: url('../../img/zillow.png');
+    background-size: cover;
+    background-position: center; */
+    /* background: yellow; */
+}
+
+.left__img{
+    width: 100%;
+    height: 100%;
+}
+
+.right{
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background:yellow; */
+    
+}
+
+.company{
+    color: blue;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.address{
+    font-size: 2rem;
+}
+
+.email{
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.phone{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.border{
+    background: lightgray;
+    width:65%;
+    margin: 0 auto;
+    font-size: 2px;
+    /* margin-bottom: 10rem; */
+}
+
+.brandsContainer{
+    padding: 5rem;
+
+    display: flex;
+    justify-content: space-around;
+    /* background: pink; */
+}
+
+.brand{
+    /* width: 25%; */
+}
+
+.brand__img{
+    width: 12rem;
+}
+
+.brand__header{
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.brand__add{
+    margin-top: 2rem;
+    font-size:1.5rem;
+}
+
+
+
+.maps{
+    width: 100%;
+    height: 30rem;
+}
+
+

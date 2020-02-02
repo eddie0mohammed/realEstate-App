@@ -3,6 +3,9 @@ import React from 'react';
 
 import styles from './Header.module.css';
 
+import {NavLink} from 'react-router-dom';
+
+
 
 class Header extends React.Component{
 
@@ -15,11 +18,12 @@ class Header extends React.Component{
                 <div className={styles.header__logo}>LOGO</div>
 
                 <div className={styles.header__links}>
-                    <p className={styles.header__link}>Create Ads</p>
-                    <p className={styles.header__link}>About Us</p>
-                    <p className={styles.header__link}>Log In</p>
+                    <NavLink to='/' exact className={styles.header__link}>Home</NavLink>
+                    <NavLink to='/about' exact className={styles.header__link}>About Us</NavLink>
+                    <NavLink to="/listings" exact className={styles.header__link}>Listings</NavLink>
+                    <NavLink to="/contact" exact className={styles.header__link}>Contact</NavLink>
 
-                    <p className={`${styles.header__link} ${styles.header__register}`}>Register</p>
+                    <button onClick={this.props.showModal} className={`${styles.header__link} ${styles.header__register}`}>Login / Register</button>
 
                 </div>
             </div>

@@ -12,3 +12,28 @@ html{
     /* 1rem = 10px */
     font-family: sans-serif;
 }
+
+.pagination__active{
+    color: white;
+    background: lightcoral;
+    border-radius: 50%;
+    align-self: center;
+      
+}
+
+.active1{
+    /* background: pink; */
+    color: black !important;
+    
+}
+
+
+.active{
+    border-bottom: 1px solid white;
+    
+}
+
+.activelink{
+    border-bottom: 1px solid blue !important;
+    color: blue;
+}

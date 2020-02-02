@@ -1,0 +1,89 @@
+import React from 'react';
+
+import styles from './Home.module.css';
+
+
+class Home extends React.Component{
+
+
+    render(){
+
+
+        return (
+            <div className={styles.home}>
+
+
+                <div className={styles.home__topSection}>
+
+                    <div className={styles.overlay}></div>
+
+                    <div className={styles.home__container}>
+
+                        <h1 className={styles.home__header}>Reimagine Home</h1>
+
+                        <p className={styles.home__subheader}>We'll help you find a place you'll love.</p>
+
+                        <select name="location" className={styles.header__select}>
+                            <option value="choose location" hidden>Choose a location</option>
+                            <option value="Rotterdam" >Rotterdam</option>
+                            <option value="Amsterdam" >Amsterdam</option>
+                            <option value="Frankfurt">Frankfurt</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div className={styles.home__secondSection}>
+
+                    <h2 className={styles.secondSection__heading}>We have the most listings and contant updates. <br/>So you'll never miss out.</h2>
+
+                    <p className={styles.border}>&nbsp;</p>
+
+                    <div className={styles.secondSection__cardContainer}>
+
+                        <div className={styles.card}>
+
+                            <div className={styles.card__img}></div>
+
+                            <h4 className={styles.card__heading}>Buy a home</h4>
+
+                            <p className={styles.card__text}>Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.</p>
+
+                            <button className={styles.card__btn}>Search homes</button>
+
+                        </div>
+
+                        <div className={styles.card}>
+
+                            <div className={styles.card__img}></div>
+
+                            <h4 className={styles.card__heading}>Sell a home</h4>
+
+                            <p className={styles.card__text}>Whether you sell with our new offers or take another approach, we'll help you navigate the path to a successful sale.</p>
+
+                            <button className={styles.card__btn}>Search homes</button>
+
+                        </div>
+
+                        <div className={styles.card}>
+
+                            <div className={styles.card__img}></div>
+
+                            <h4 className={styles.card__heading}>Rent a home</h4>
+
+                            <p className={styles.card__text}>We're creating a seamless online experience - from shopping on the largest rental network, to applying and playing rent.</p>
+
+                            <button className={styles.card__btn}>Search homes</button>
+
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+            </div>
+        )
+    }
+}
+
+export default Home;

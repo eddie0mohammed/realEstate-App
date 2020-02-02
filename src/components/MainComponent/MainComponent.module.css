@@ -84,9 +84,10 @@
     outline:none;
 }
 
-.right__second ion-icon{
+.icon{
     font-size: 2rem;
     cursor: pointer;
+    color: lightgrey;
 }
 
 
@@ -153,7 +154,7 @@
     transition: all 0.2s ease-in-out;
     
     position: relative;
-    z-index: 10;
+    z-index: 8;
 
 
 
@@ -237,7 +238,7 @@ padding: 0 1rem;
     font-size: 1.4rem;
     font-weight: 500;
     position: relative;
-    z-index: 11;
+    z-index: 9;
 }
 
 /* BOTTOM PART */
@@ -307,6 +308,8 @@ padding: 0 1rem;
 .number{
     text-align: center;
     padding: 0.5rem 1rem;
+    cursor: pointer;
+    height: 100%;
 }
 
 .prev,
@@ -317,11 +320,134 @@ padding: 0 1rem;
     color: darkblue;
     font-weight: 600;
     align-self: center;
+
+    cursor:pointer;
 }
 
-.active{
+.prev:hover,
+.next:hover{
+    background: darkblue;
     color: white;
-    background: lightcoral;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+
+
+
+/* ROW Version of content */
+
+.rows{
+    width: 100%;
+    /* height: 15rem; */
+    /* background: pink; */
+
+    padding: 1rem;
+
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin-top: 1.5rem;
+
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
+    border-radius: 5px;
+
+
+}
+
+.rows__img{
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.rows__content{
+    width: 70%;
+    height: 100%;
+    /* background: lightblue; */
+    padding: 1rem;
+}
+
+.content__placeName{
+    font-size: 2rem;
+}
+
+.second{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.second__left{
+    width: 40%;
+    /* background: red; */
+}
+
+
+.content__price{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.content__location{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.content__location ion-icon{
+    margin-right: 1rem;
+}
+
+
+.second__right{
+    width: 60%;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.second__rightFirst{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.second__rightSecond{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+
+}
+
+.third{
+    display: flex;
+    align-items: center;
+}
+
+.person__image{
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    margin-right: 1rem;
+}
+
+.posted__details{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.details__name{
+}
+
+.details__date{
     
 }

@@ -1,0 +1,107 @@
+
+.container{
+
+    position: relative;
+    height: 100%;
+
+    padding: 5rem;
+    
+}
+
+.icon{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+.content{
+
+    width: 100%;
+    height: 100%;
+    /* background: pink; */
+    
+}
+
+.header{
+    font-size: 3rem;
+}
+
+.links{
+    
+    margin-top: 2rem;
+    /* background: yellow; */
+    display: flex;
+    
+    border-bottom: 1px solid lightgray;   
+    
+    font-size: 1.8rem;
+
+}
+
+.link{
+    border: none;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.link:focus{
+    outline: none;
+}
+
+.link:nth-child(2){
+    margin-left: 3rem;
+
+    padding-bottom: 1rem;
+
+
+}
+
+.signIn{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    margin: 0.75rem 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.btn{
+    padding: 1rem;
+    margin: 0.75rem 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background: rgb(0, 83, 236);
+    color: white;
+    font-weight: 500;
+}
+
+.forget{
+    color:rgb(0, 83, 236);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.75rem 0;
+}
+
+.register{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    /* display: none; */
+}
+
+.disclaimer{
+    text-align: center;
+    margin: 1rem;
+}
