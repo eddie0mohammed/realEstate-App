@@ -17,11 +17,13 @@ import NotFound from './pages/NotFound/NotFound';
 import Backdrop from './UI/Backdrop/Backdrop';
 import Modal from './UI/Modal/Modal';
 
+import {data} from './Data/data';
+
 class App extends React.Component {
 
 
   state = {
-    showModal: true,
+    showModal: false,
   }
 
   showModal = () => {
@@ -36,9 +38,21 @@ class App extends React.Component {
     })
   }
 
+  retrieveData = () => {
+    let locations = [];
+
+    data.forEach(elem => {
+      if (!locations.includes(elem.city)){
+        locations.push(elem.city);
+      }
+    });
+    return locations;
+  }
+
 
   render(){
 
+    let locations = this.retrieveData();
   
     return (
       <div className={` ${styles.app} App`}>
@@ -47,11 +61,11 @@ class App extends React.Component {
 
 
         <Switch >
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact render={(props) => <Home {...props} location={locations}/>} />
           <Route path='/about' exact component={About} />
           <Route path='/contact' exact component={Contact} />
           <Route path="/listings" exact component={Main} />
-          {/* <Route path="/auth" exact component={Register} /> */}
+          <Route path="/listings/:location" exact component={Main} />
 
 
           <Route component={NotFound} />

@@ -76,6 +76,11 @@
     font-size: 1.5rem;
 }
 
+.input:focus{
+    outline:none;
+    
+}
+
 .btn{
     padding: 1rem;
     margin: 0.75rem 0;
@@ -84,6 +89,11 @@
     background: rgb(0, 83, 236);
     color: white;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
 }
 
 .forget{
@@ -91,6 +101,10 @@
     font-size: 1.5rem;
     text-align: center;
     margin: 0.75rem 0;
+    text-decoration: none;
+}
+.forget:hover{
+    text-decoration: underline;
 }
 
 .register{
@@ -104,4 +118,5 @@
 .disclaimer{
     text-align: center;
     margin: 1rem;
+
 }

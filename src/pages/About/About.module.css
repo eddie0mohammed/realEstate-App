@@ -76,7 +76,7 @@
 .about__btn:hover{
     background: white;
     color: black;
-    text-decoration:underline;
+    
 }
 .about__btn:focus{
     outline: none;

@@ -15,10 +15,10 @@ class Footer extends React.Component{
 
                 <div className={styles.footer__left}>
 
-
                 </div>
 
                 <div className={styles.footer__center}>
+                    
                     <h2 className={styles.center__header}>Download Pararius App</h2>
 
                     <p className={styles.center__text}>Use our app to have 11,279 rental <br/>properties at hand</p>

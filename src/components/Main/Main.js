@@ -16,8 +16,20 @@ class Main extends React.Component{
 
         currentPage: 1,
         postsPerPage: 6,
-        display: '1'
+        display: '1',
         
+    }
+
+    componentDidMount(){
+        if (this.props.match.params.hasOwnProperty('location')){
+            this.setState({
+                ...this.state,
+                filters: {
+                    ...this.state.filters,
+                    city: this.props.match.params.location
+                }
+            })
+        }
     }
 
     handleChange = (e) => {
@@ -148,6 +160,12 @@ class Main extends React.Component{
         // console.log(indexOfLastPost);
         // console.log(currentPosts);
 
+
+        let val = 'City';
+        if (this.props.match.params.hasOwnProperty('location')){
+            val = this.props.match.params.location;
+        }
+        
         
 
         return (
@@ -158,7 +176,7 @@ class Main extends React.Component{
                 </div>
 
                 <div className={styles.main__content}>
-                    <MainComponent display={this.state.display} displayChange={this.displayChange} originalData={this.state.data} data={currentPosts} handleChange={this.handleChange} sort={this.handleSort} paginate={this.paginate} totalPosts={filteredData.length} postsPerPage={this.state.postsPerPage} currentPage={this.state.currentPage}/>
+                    <MainComponent val={val} display={this.state.display} displayChange={this.displayChange} originalData={this.state.data} data={currentPosts} handleChange={this.handleChange} sort={this.handleSort} paginate={this.paginate} totalPosts={filteredData.length} postsPerPage={this.state.postsPerPage} currentPage={this.state.currentPage}/>
                 </div>
             </div>
         )

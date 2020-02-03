@@ -4,6 +4,8 @@
     /* background: pink; */
     width: 100%;
     height: 100%;
+
+    position:relative;
 }
 
 .row{
@@ -276,7 +278,7 @@ padding: 0 1rem;
 .paginationArea{
     /* background: green; */
     height: 5rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,6 +286,11 @@ padding: 0 1rem;
     font-size: 1.5rem;
     
     /* padding: 1rem; */
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
 }
 
 .bar{

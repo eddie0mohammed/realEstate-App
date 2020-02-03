@@ -82,6 +82,7 @@
     display: flex;
     justify-content: space-around;
     /* background: pink; */
+    margin-bottom: 2rem;
 }
 
 .brand{
@@ -90,6 +91,7 @@
 
 .brand__img{
     width: 12rem;
+    height: 6rem;
 }
 
 .brand__header{

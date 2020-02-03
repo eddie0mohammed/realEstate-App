@@ -6,9 +6,28 @@ import styles from './Home.module.css';
 class Home extends React.Component{
 
 
+    state = {
+        location: ''
+    }
+
+    renderLocations = () => {
+        return this.props.location.map(elem => {
+            return <option key={elem} value={elem} >{elem}</option>
+        })
+    }
+
+    handleSelectChange = (e) => {
+        this.setState({
+            location: e.target.value
+        },() => {
+            this.props.history.push(`/listings/${this.state.location}`);
+        })
+    }
+
     render(){
 
 
+        
         return (
             <div className={styles.home}>
 
@@ -23,11 +42,10 @@ class Home extends React.Component{
 
                         <p className={styles.home__subheader}>We'll help you find a place you'll love.</p>
 
-                        <select name="location" className={styles.header__select}>
+                        <select name="location" className={styles.header__select} onChange={this.handleSelectChange}>
                             <option value="choose location" hidden>Choose a location</option>
-                            <option value="Rotterdam" >Rotterdam</option>
-                            <option value="Amsterdam" >Amsterdam</option>
-                            <option value="Frankfurt">Frankfurt</option>
+                            <option value="All" >All</option>
+                            {this.renderLocations()}
                         </select>
 
                     </div>
@@ -49,7 +67,7 @@ class Home extends React.Component{
 
                             <p className={styles.card__text}>Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.</p>
 
-                            <button className={styles.card__btn}>Search homes</button>
+                            <button className={styles.card__btn} onClick={() => this.props.history.push('/listings')}>Search homes</button>
 
                         </div>
 
@@ -61,7 +79,7 @@ class Home extends React.Component{
 
                             <p className={styles.card__text}>Whether you sell with our new offers or take another approach, we'll help you navigate the path to a successful sale.</p>
 
-                            <button className={styles.card__btn}>Search homes</button>
+                            <button className={styles.card__btn} onClick={() => this.props.history.push('/listings')}>Search homes</button>
 
                         </div>
 
@@ -73,7 +91,7 @@ class Home extends React.Component{
 
                             <p className={styles.card__text}>We're creating a seamless online experience - from shopping on the largest rental network, to applying and playing rent.</p>
 
-                            <button className={styles.card__btn}>Search homes</button>
+                            <button className={styles.card__btn} onClick={() => this.props.history.push('/listings')}>Search homes</button>
 
                         </div>
                     </div>

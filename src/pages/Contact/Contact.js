@@ -5,9 +5,9 @@ import styles from './Contact.module.css';
 
 import img from '../../img/zillow.png';
 import one from '../../img/1.png';
-// import two from '../../img/2.png';
-// import three from '../../img/3.png';
-// import four from '../../img/4.png';
+import two from '../../img/2.png';
+import three from '../../img/3.png';
+import four from '../../img/4.png';
 
 
 class Contact extends React.Component{
@@ -57,7 +57,7 @@ class Contact extends React.Component{
 
                      <div className={styles.brand}>
 
-                        <img className={styles.brand__img} src={one} alt="two"/>
+                        <img className={styles.brand__img} src={two} alt="two"/>
                         <h4 className={styles.brand__header}>Trulia</h4>
 
                         <p className={styles.brand__add}>535 Mission Street <br/>Suite 700 <br/>San Francisco, CA 94105</p>
@@ -66,8 +66,8 @@ class Contact extends React.Component{
 
                      <div className={styles.brand}>
 
-                        <img className={styles.brand__img} src={one} alt="one"/>
-                        <h4 className={styles.brand__header}>StreetEasy</h4>
+                        <img className={styles.brand__img} src={three} alt="one"/>
+                        <h4 className={styles.brand__header}>Outeast</h4>
 
                         <p className={styles.brand__add}>130 5th Avenue <br/>Floor 6 <br/>New York, NY 10011</p>
                         
@@ -75,7 +75,7 @@ class Contact extends React.Component{
 
                      <div className={styles.brand}>
 
-                        <img className={styles.brand__img} src={one} alt="one"/>
+                        <img className={styles.brand__img} src={four} alt="one"/>
                         <h4 className={styles.brand__header}>Naked Apartments</h4>
 
                         <p className={styles.brand__add}>535 Mission Street<br/>Floor 11 <br/>New York, NY 10011</p>

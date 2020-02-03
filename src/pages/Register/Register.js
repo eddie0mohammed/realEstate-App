@@ -52,20 +52,20 @@ class Register extends React.Component{
                         <button className={styles.link} onClick={this.showSignUp}>New Account</button>
                     </div>
 
-                    <div className={styles.signIn} style={{display:`${this.state.signIn ? 'flex' : 'none'}`}}>
-                        <input className={styles.input} type="text" placeholder='Enter email'/>
-                        <input className={styles.input} type="text" placeholder='Enter password'/>
+                    <form className={styles.signIn} style={{display:`${this.state.signIn ? 'flex' : 'none'}`}}>
+                        <input className={styles.input} type="text" placeholder='Enter email' required/>
+                        <input className={styles.input} type="text" placeholder='Enter password' required/>
                         <button className={styles.btn}>Sign In</button>
-                        <p className={styles.forget}>Forgot your password?</p>
-                    </div>
+                        <a href="/" className={styles.forget}>Forgot your password?</a>
+                    </form>
 
-                    <div className={styles.register} style={{display:`${this.state.signIn ? 'none' : 'flex'}`}}>
-                        <input className={styles.input} type="text" placeholder='Enter email'/>
-                        <input className={styles.input} type="text" placeholder='Create password'/>
+                    <form className={styles.register} style={{display:`${this.state.signIn ? 'none' : 'flex'}`}}>
+                        <input className={styles.input} type="text" placeholder='Enter email' required/>
+                        <input className={styles.input} type="text" placeholder='Create password' required/>
                         <button className={styles.btn}>Submit</button>
 
                         <p className={styles.disclaimer}>By submitting, I accept Zillow's terms of use.</p>
-                    </div>
+                    </form>
                     
                 </div>
             </div>

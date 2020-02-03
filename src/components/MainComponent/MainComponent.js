@@ -226,7 +226,7 @@ class MainComponent extends React.Component{
 
                     <div className={styles.right}>
 
-                        <select name="city" className={styles.right__city} onChange={this.props.handleChange}>
+                        <select name="city" className={styles.right__city} onChange={this.props.handleChange} defaultValue={this.props.val}>
                             <option value="City" hidden className={styles.option}>City</option>
                             <option value="All" className={styles.option}>All</option>
                             

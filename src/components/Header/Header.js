@@ -15,7 +15,7 @@ class Header extends React.Component{
         return (
             <div className={styles.header}>
 
-                <div className={styles.header__logo}>LOGO</div>
+                <div className={styles.header__logo}><ion-icon name="business"></ion-icon></div>
 
                 <div className={styles.header__links}>
                     <NavLink to='/' exact className={styles.header__link}>Home</NavLink>

@@ -63,7 +63,9 @@
     font-weight: 500;
     background-image: linear-gradient(to bottom, rgb(230, 98, 120), rgb(196, 84, 103));
     color: white;
+    cursor: pointer;
 }
+
 
 .button ion-icon{
     
@@ -85,7 +87,12 @@
     padding: 0.5rem;
     font-size: 2rem;
     color: white;
+    transition: all 0.2s ease-in-out;
   
+}
+.link:hover{
+    cursor:pointer;
+    color: blue;
 }
 
 .copyright{
@@ -130,4 +137,10 @@
     font-size: 1.1rem;
     font-weight: 500;
     color: darkgray;
+    transition: all 0.2s ease-in-out;
+}
+
+.text:hover{
+    cursor: pointer;
+    color: white;
 }
