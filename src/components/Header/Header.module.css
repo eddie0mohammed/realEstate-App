@@ -9,6 +9,18 @@
 
 }
 
+@media (max-width: 767px){
+    .header{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .header{
+        padding: 1rem;
+    }
+}
+
 .header__logo{
     margin-right: auto;
     color: white;
@@ -24,6 +36,12 @@
     display: flex;
     align-items: center;
     /* background:red; */
+}
+
+@media (max-width: 600px){
+    .header__links{
+        display: none;
+    }
 }
 
 .header__link{

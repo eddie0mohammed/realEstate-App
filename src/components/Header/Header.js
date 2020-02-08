@@ -19,7 +19,7 @@ class Header extends React.Component{
 
                 <div className={styles.header__links}>
                     <NavLink to='/' exact className={styles.header__link}>Home</NavLink>
-                    <NavLink to='/about' exact className={styles.header__link}>About Us</NavLink>
+                    <NavLink to='/about' exact className={styles.header__link}>About</NavLink>
                     <NavLink to="/listings" exact className={styles.header__link}>Listings</NavLink>
                     <NavLink to="/contact" exact className={styles.header__link}>Contact</NavLink>
 

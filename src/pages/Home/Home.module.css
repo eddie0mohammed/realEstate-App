@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     z-index: -1;
 }
 
@@ -41,21 +41,47 @@
 }
 
 .home__header{
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 400;
 
 }
 
+@media (min-width: 1200px){
+    .home__header{
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 767px){
+    .home__header{
+        font-size: 5rem;
+    }
+}
+
 .home__subheader{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 3rem 0;
 }
 
+@media (max-width: 767px){
+    .home__subheader{
+        font-size: 2rem;
+    }
+}
+
 .header__select{
-    width: 80%;
+    width: 60%;
     height: 5rem;
     font-size: 2rem;
     border: none;
+    margin-top: 4rem;
+}
+
+@media (max-width: 767px){
+    .header__select{
+        width: 80%;
+        margin-top: 3rem;
+    }
 }
 
 .header__select:focus{
@@ -69,13 +95,41 @@
     width: 100%;
     /* height: 100vh; */
     text-align: center;
+    padding: 0 1rem;
     padding-bottom: 10rem;
 }
 
+@media (max-width: 600px){
+    .home__secondSection{
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 767px){
+    .home__secondSection{
+        padding: 0 2rem;
+    }
+}
+
+
+
 .secondSection__heading{
     margin-top: 10rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 3.5rem;
+}
+
+@media (min-width: 1200px){
+    .secondSection__heading{
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 767px){
+    .secondSection__heading{
+        font-size: 2.5rem;
+        
+    }
 }
 
 .border{
@@ -90,12 +144,40 @@
     width: 80%;
     margin: 0 auto;
     
+    padding-bottom: 3rem;
     /* background: lightblue; */
     
     display: flex;
     justify-content: space-between;
 }
 
+@media (min-width: 1400px){
+    .secondSection__cardContainer{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px){
+    .secondSection__cardContainer{
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px){
+    .secondSection__cardContainer{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+}
+
+@media (max-width: 600px){
+    .secondSection__cardContainer{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+}
 
 .card{
     width: 32%;
@@ -105,6 +187,24 @@
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
     /* cursor: pointer; */
     transition: all 0.2s ease-in-out;
+
+    position: relative;
+}
+
+@media (max-width: 767px){
+    .card{
+        width: 60%;
+        margin: 1.5rem auto;
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .card{
+        width: 80%;
+        margin: 1rem auto;
+        padding: 3rem 2rem;
+    }
 }
 
 .card:hover{
@@ -116,8 +216,31 @@
 
 .card__img{
     width: 100%;
-    height: 12rem;
+    height: 15rem;
     background: black;
+}
+
+@media (min-width: 1400px){
+    .card__img{
+        height: 20rem;
+    }
+}
+
+
+@media (max-width: 767px){
+    .card__img{
+        height: 20rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px){
+    .card__img{
+        height: 17.5rem;
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .card__heading{
@@ -125,9 +248,52 @@
     font-size: 2.5rem;
 }
 
+@media (min-width: 1400px){
+    .card__heading{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 767px){
+    .card__heading{
+        font-size: 3rem;
+
+    }
+}
+
+@media (max-width: 600px){
+    .card__heading{
+        font-size: 2.5rem;
+
+    }
+}
+
 .card__text{
     margin: 2rem 0;
     font-size: 1.5rem;
+    /* background: pink; */
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 1400px){
+    .card__text{
+        font-size: 2rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width: 767px){
+    .card__text{
+        font-size: 1.75rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .card__text{
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .card__btn{
@@ -136,7 +302,38 @@
     border-radius: 5px;
     font-weight: 600;
     transition: all 0.2s ease-in-out;
+    
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translate( -50%, 0);
+    
+    
 }
+
+@media (min-width: 1400px){
+    .card__btn{
+        font-size: 1.5rem;
+        /* align-self: flex-end; */
+    }
+}
+
+@media (max-width: 767px){
+    .card__btn{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        bottom: 5%;
+
+    }
+}
+
+@media (max-width: 600px){
+    .card__btn{
+        font-size: 1rem;
+        bottom: 5%;
+    }
+}
+
 
 .card:hover .card__btn{
     background: blue;

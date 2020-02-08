@@ -53,7 +53,7 @@ class Home extends React.Component{
 
                 <div className={styles.home__secondSection}>
 
-                    <h2 className={styles.secondSection__heading}>We have the most listings and contant updates. <br/>So you'll never miss out.</h2>
+                    <h2 className={styles.secondSection__heading}>We have the most listings and constant updates. <br/>So you'll never miss out.</h2>
 
                     <p className={styles.border}>&nbsp;</p>
 
