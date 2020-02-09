@@ -73,3 +73,16 @@
 .header__register:active{
     transform: translateY(1px);
 }
+
+
+.ham__container{
+    display: none;
+}
+
+@media (max-width: 600px){
+    .ham__container{
+        display: block !important;
+        margin-right: 2rem;
+        
+    }
+}

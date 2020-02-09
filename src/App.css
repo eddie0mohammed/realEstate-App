@@ -37,3 +37,143 @@ html{
     border-bottom: 1px solid blue !important;
     color: blue;
 }
+
+
+
+
+/* HAMBURGER */
+
+
+.hamburger__container{
+    /* background: pink; */
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+    /* background: red; */
+    /* border: 1px solid white; */
+
+    position: relative;
+    z-index: 2000;
+
+    /* display: none; */
+
+    /* transform: translateX(100%);
+    transition: all 0.2s ease-in-out; */
+}
+
+/* @media (max-width: 600px){
+    .hamburger__container{
+        display: block;
+    }
+} */
+
+/* .hamburger__container.barActive{
+    transform: translateX(0);
+}  */
+
+.bar{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+
+    /* margin: 0.25rem 0; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.bar:nth-child(1){
+    top: 10%;
+}
+
+.bar:nth-child(2){
+    
+}
+
+.bar:nth-child(3){
+    top: 90%;
+    
+
+}
+/* 
+.bar::before,
+.bar::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    
+    
+}
+
+.bar::before{
+    transform: translateY(-8px);
+
+}
+
+.bar::after{
+    transform: translateY(-5px);
+} */
+
+
+
+/* 
+.menu__hamburger::before,
+.menu__hamburger::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+.menu__hamburger::before{
+    transform: translateY(-8px);
+
+}
+
+.menu__hamburger::after{
+    transform: translateY(8px);
+}
+ */
+
+
+.barActive{
+    /* background: pink; */
+}
+
+.barActive .bar:nth-child(2){
+    opacity: 0;
+}
+
+.barActive .bar:nth-child(1){
+    top: 50%;
+    left: 0;
+    transform: rotate(135deg);
+    
+}
+
+.barActive .bar:nth-child(3){
+    top: 50%;
+    left: 0;
+    transform: rotate(-135deg);
+    width: 100%;
+    
+}
+
+

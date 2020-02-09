@@ -16,6 +16,7 @@ import NotFound from './pages/NotFound/NotFound';
 
 import Backdrop from './UI/Backdrop/Backdrop';
 import Modal from './UI/Modal/Modal';
+import Sidebar from './components/Sidebar/Sidebar';
 
 import {data} from './Data/data';
 
@@ -24,6 +25,7 @@ class App extends React.Component {
 
   state = {
     showModal: false,
+    showSidebar: false
   }
 
   showModal = () => {
@@ -49,6 +51,12 @@ class App extends React.Component {
     return locations;
   }
 
+  toggleSidebar = () => {
+    this.setState({
+      showSidebar: !this.state.showSidebar
+    });
+  }
+
 
   render(){
 
@@ -57,7 +65,7 @@ class App extends React.Component {
     return (
       <div className={` ${styles.app} App`}>
 
-        <Header showModal={this.showModal}/>
+        <Header showModal={this.showModal} toggle={this.toggleSidebar} showSidebar={this.state.showSidebar}/>
 
 
         <Switch >
@@ -80,7 +88,10 @@ class App extends React.Component {
         <Modal show={this.state.showModal} hide={this.hideModal}>
           <Register hide={this.hideModal}/>
         </Modal>
+
         <Backdrop show={this.state.showModal} hide={this.hideModal}/>
+
+        <Sidebar  show={this.state.showSidebar} hideSidebar={this.toggleSidebar}/>
         
       </div>
     );
