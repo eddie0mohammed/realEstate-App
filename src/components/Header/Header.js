@@ -52,11 +52,8 @@ class Header extends React.Component{
 
                     <button onClick={this.props.showModal} className={`${styles.header__link} ${styles.header__register}`}>Login / Register</button>
 
-
-                    
-                    
-
                 </div>
+                
                 <div className={`hamburger__container ${styles.ham__container} ${showHamburger}`} onClick={this.handleClick}>
                     <span className='bar'>&nbsp;</span>
                     <span className='bar'>&nbsp;</span>

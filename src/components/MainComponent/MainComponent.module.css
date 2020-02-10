@@ -103,7 +103,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    padding-bottom: 5rem;
     
+}
+
+@media (min-width: 1200px){
+    .mainContent{
+        padding-bottom: 8rem;
+    }
 }
 
 .card{
@@ -117,6 +125,23 @@
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
 
     
+}
+
+
+
+@media (min-width: 1200px){
+    .card{
+        width: 31%;
+        margin-top: 3rem;
+    }
+}
+
+@media (min-width: 1400px){
+    .card{
+        width: 32%;
+        margin-top: 1.5rem;
+        
+    }
 }
 
 /* TOP PART */
@@ -182,9 +207,30 @@
     /* margin-right: 1rem; */
 }
 
+
+@media (min-width: 1200px){
+    .content__img{
+        height: 9rem;
+        width: 7rem;
+    }
+}
+
+@media (min-width: 1400px){
+    .content__img{
+        height: 12rem;
+        width: 9rem;
+    }
+}
+
 .content__details{
 padding: 0 1rem;
   
+}
+
+@media (min-width: 1200px){
+    .content__details{
+        margin-top: 1rem;
+    }
 }
 
 .name{
@@ -192,6 +238,12 @@ padding: 0 1rem;
     font-weight: 500;
     
     
+}
+
+@media (min-width: 1200px){
+    .name{
+        font-size: 1.8rem;
+    }
 }
 
 .date{
@@ -229,6 +281,20 @@ padding: 0 1rem;
     text-decoration: underline;
 }
 
+@media (min-width: 1200px){
+    .text{
+        font-size: 1.3rem;
+    }
+
+    .text ion-icon{
+        font-size: 1.8rem;
+    }
+
+    .link{
+        font-size: 1.3rem;
+    }
+}
+
 .card:hover .content{
     opacity: 1;
 }
@@ -243,6 +309,19 @@ padding: 0 1rem;
     z-index: 9;
 }
 
+@media (min-width: 1200px){
+    .apartment{
+        font-size: 1.7rem;
+
+    }
+}
+
+@media (min-width: 1400px){
+    .apartment{
+        font-size: 2rem;
+    }
+}
+
 /* BOTTOM PART */
 .card__bottom{
     padding: 1rem 2rem;
@@ -251,9 +330,34 @@ padding: 0 1rem;
     background: white;
 }
 
+@media (min-width: 1200px){
+    .card__bottom{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 767px){
+    .card__bottom{
+        padding: 1rem 2rem;
+    }
+}
+
 .cardBottom__price{
     font-size: 1.4rem;
     color: black;
+}
+
+@media (min-width: 1200px){
+    .cardBottom__price{
+        font-size: 1.6rem;
+        
+    }
+}
+
+@media (min-width: 1400px){
+    .cardBottom__price{
+        font-size: 1.8rem;
+    }
 }
 
 .cardBottom__location{
@@ -264,6 +368,18 @@ padding: 0 1rem;
     padding: 0.5rem 0;
     color: grey;
 
+}
+
+@media (min-width: 1200px){
+    .cardBottom__location{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1400px){
+    .cardBottom__location{
+        font-size: 1.5rem;
+    }
 }
 
 .city{
@@ -289,8 +405,30 @@ padding: 0 1rem;
     position: absolute;
     bottom: 0;
 
-    width: 100%;
+    width: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
 
+    
+
+}
+
+@media (min-width: 1200px){
+    .paginationArea{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1400px){
+    .paginationArea{
+        /* width: 35%; */
+    }
+}
+
+@media (max-width: 767px){
+    .paginationArea{
+        width: 100%;
+    }
 }
 
 .bar{
@@ -302,6 +440,7 @@ padding: 0 1rem;
     padding: 0.5rem;
 
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+    border-radius: 100px;
    
 }
 

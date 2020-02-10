@@ -1,5 +1,44 @@
 
 .filter__container{
+    margin-top: 1rem;
+}
+
+@media (min-width: 601px){
+    .filter__container{
+        display: block !important;
+    }
+}
+
+
+
+.hamburger{
+    width: 100%;
+    display: none;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+
+}
+
+@media (max-width: 600px){
+    .hamburger{
+        display: flex;
+    }
+}
+
+.btn__label{
+    font-size: 1.2rem;
+    margin-right: auto;
+    font-weight: 600;
+
+}
+
+.btn__icon{
+    font-size:1.5rem;
+    font-weight: 600;
+
 
 }
 

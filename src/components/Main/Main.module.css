@@ -6,15 +6,76 @@
     display: flex;
 }
 
+@media (max-width: 600px){
+    .main{
+        flex-direction: column;
+    }
+}
+
 .filter{
-    width: 35%;
+    width: 30%;
     background: lightblue;
     padding: 2rem 3rem 0 6rem;
 }
 
+@media (min-width: 1400px){
+    .filter{
+        width: 15%;
+    }
+}
+
+@media (min-width: 1200px){
+    .filter{
+        width: 25%;
+    }
+}
+
+@media (max-width: 767px){
+    .filter{
+        width: 35%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .filter{
+        width: 100%;
+        padding: 2rem;
+        /* padding: 0; */
+    }
+}
+
 .main__content{
-    width: 65%;
+    width: 70%;
     /* background: lightgoldenrodyellow; */
 
     padding: 2rem;
+    
+}
+
+
+
+@media (min-width: 1200px){
+    .main__content{
+        width: 75%;
+    }
+}
+@media (min-width: 1400px){
+    .main__content{
+        width: 85%;
+    }
+}
+
+@media (max-width: 767px){
+    .main__content{
+        width: 65%;
+    }
+}
+
+@media (max-width: 600px){
+    .main__content{
+        width: 100%;
+        padding: 0.5rem;
+        
+    }
 }

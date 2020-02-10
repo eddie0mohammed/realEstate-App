@@ -15,6 +15,7 @@ class MainComponent extends React.Component{
                         
                         <div className={styles.card__top} style={{backgroundImage: `url(${elem.placeImg})`}}>
                             <div className={styles.overlay}></div>
+                            
                             <div className={styles.content}>
 
                                 <div className={styles.content__row}>
@@ -149,13 +150,13 @@ class MainComponent extends React.Component{
             return ;
         }else{
             e.target.previousElementSibling.childNodes.forEach(elem => {
-                elem.classList.remove('active');
+                elem.classList.remove('pagination__active');
             })
             let newPageNumber = currentPage + 1;
             paginate(newPageNumber); 
             // console.log(newPageNumber);
             let currentPageElement = Array.from(e.target.previousElementSibling.childNodes).find(elem => elem.textContent === newPageNumber.toString());
-            currentPageElement.classList.add('active');
+            currentPageElement.classList.add('pagination__active');
         }
         // console.log(e.target.previousElementSibling.childNodes);
 
@@ -168,13 +169,13 @@ class MainComponent extends React.Component{
             return ;
         }else{
             e.target.nextElementSibling.childNodes.forEach(elem => {
-                elem.classList.remove('active');
+                elem.classList.remove('pagination__active');
             })
             let newPageNumber = currentPage - 1;
             paginate(newPageNumber); 
             // console.log(newPageNumber);
             let currentPageElement = Array.from(e.target.nextElementSibling.childNodes).find(elem => elem.textContent === newPageNumber.toString());
-            currentPageElement.classList.add('active');
+            currentPageElement.classList.add('pagination__active');
         }
 
 
