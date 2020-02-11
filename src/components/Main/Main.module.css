@@ -14,19 +14,23 @@
 
 .filter{
     width: 30%;
-    background: lightblue;
-    padding: 2rem 3rem 0 6rem;
+    background: lightgray;
+    padding: 2rem;
 }
 
-@media (min-width: 1400px){
-    .filter{
-        width: 15%;
-    }
-}
+
 
 @media (min-width: 1200px){
     .filter{
         width: 25%;
+        padding: 2rem 3rem 0 6rem;
+
+    }
+}
+
+@media (min-width: 1400px){
+    .filter{
+        width: 20%;
     }
 }
 

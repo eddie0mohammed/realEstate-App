@@ -111,6 +111,7 @@
 @media (min-width: 1200px){
     .mainContent{
         padding-bottom: 8rem;
+        justify-content: space-around;
     }
 }
 

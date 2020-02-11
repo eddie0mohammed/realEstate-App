@@ -61,7 +61,7 @@ class Home extends React.Component{
 
                         <div className={styles.card}>
 
-                            <div className={styles.card__img}></div>
+                            <div className={styles.card__img} style={{backgroundImage: `url("https://source.unsplash.com/koH7IVuwRLw")`}}></div>
 
                             <h4 className={styles.card__heading}>Buy a home</h4>
 
@@ -73,7 +73,7 @@ class Home extends React.Component{
 
                         <div className={styles.card}>
 
-                            <div className={styles.card__img}></div>
+                            <div className={styles.card__img} style={{backgroundImage: `url("https://source.unsplash.com/_TPTXZd9mOo")`}}></div>
 
                             <h4 className={styles.card__heading}>Sell a home</h4>
 
@@ -85,7 +85,7 @@ class Home extends React.Component{
 
                         <div className={styles.card}>
 
-                            <div className={styles.card__img}></div>
+                            <div className={styles.card__img} style={{backgroundImage: `url("https://source.unsplash.com/gREquCUXQLI")`}}></div>
 
                             <h4 className={styles.card__heading}>Rent a home</h4>
 

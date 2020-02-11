@@ -20,7 +20,9 @@ class Contact extends React.Component{
             <div className={styles.contact}>
                 
                 <div className={styles.header}>
-                    Contact Us
+
+                    <div className={styles.overlay}></div>
+                    <p className={styles.text}>Contact Us</p>
                 </div>
 
 

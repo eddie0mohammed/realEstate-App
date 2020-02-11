@@ -222,7 +222,7 @@ class MainComponent extends React.Component{
                     <div className={styles.left}>
                         <input type="text" name="placeName" placeholder="Place Name" className={styles.left__input} onChange={this.props.handleChange}/>
 
-                        <p className={styles.left__results}><span className={styles.left__number}>3298</span> results found</p>
+                        {/* <p className={styles.left__results}><span className={styles.left__number}>3298</span> results found</p> */}
                     </div>
 
                     <div className={styles.right}>

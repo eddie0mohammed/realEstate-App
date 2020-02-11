@@ -228,7 +228,9 @@
 .card__img{
     width: 100%;
     height: 15rem;
-    background: black;
+    /* background: black; */
+    background-size: cover;
+    background-position: center;
 }
 
 @media (min-width: 1400px){
@@ -318,6 +320,7 @@
     bottom: 6%;
     left: 50%;
     transform: translate( -50%, 0);
+    text-transform: capitalize;
     
     
 }
@@ -347,8 +350,13 @@
 
 
 .card:hover .card__btn{
-    background: blue;
-    color: white;
+    background: lightgray;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.card__btn:hover{
+    color: white !important;
 }
 
 .card__btn:focus{
