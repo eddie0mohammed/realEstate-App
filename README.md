@@ -25,8 +25,8 @@ Features:
 
 SCRIPTS:
 
-- Install
-  - npm install
+1. Install
+ - npm install
 
-- Start
+2. Start
  - npm start
