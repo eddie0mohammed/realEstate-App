@@ -67,7 +67,7 @@ class Home extends React.Component{
 
                             <p className={styles.card__text}>Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.</p>
 
-                            <button className={styles.card__btn} onClick={() => this.props.history.push('/listings')}>Search homes</button>
+                            <button className={styles.card__btn} onClick={() => this.props.history.push('/')}>Search homes</button>
 
                         </div>
 
@@ -79,7 +79,7 @@ class Home extends React.Component{
 
                             <p className={styles.card__text}>Whether you sell with our new offers or take another approach, we'll help you navigate the path to a successful sale.</p>
 
-                            <button className={styles.card__btn} onClick={() => this.props.history.push('/listings')}>Search homes</button>
+                            <button className={styles.card__btn} onClick={() => this.props.history.push('/')}>Search homes</button>
 
                         </div>
 
@@ -91,7 +91,7 @@ class Home extends React.Component{
 
                             <p className={styles.card__text}>We're creating a seamless online experience - from shopping on the largest rental network, to applying and playing rent.</p>
 
-                            <button className={styles.card__btn} onClick={() => this.props.history.push('/listings')}>Search homes</button>
+                            <button className={styles.card__btn} onClick={() => this.props.history.push('/')}>Search homes</button>
 
                         </div>
                     </div>

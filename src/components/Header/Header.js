@@ -45,9 +45,9 @@ class Header extends React.Component{
                 <div className={styles.header__logo}><ion-icon name="business"></ion-icon></div>
 
                 <div className={styles.header__links}>
-                    <NavLink to='/' exact className={styles.header__link}>Home</NavLink>
+                    <NavLink to='/home' exact className={styles.header__link}>Home</NavLink>
                     <NavLink to='/about' exact className={styles.header__link}>About</NavLink>
-                    <NavLink to="/listings" exact className={styles.header__link}>Listings</NavLink>
+                    <NavLink to="/" exact className={styles.header__link}>Listings</NavLink>
                     <NavLink to="/contact" exact className={styles.header__link}>Contact</NavLink>
 
                     <button onClick={this.props.showModal} className={`${styles.header__link} ${styles.header__register}`}>Login / Register</button>

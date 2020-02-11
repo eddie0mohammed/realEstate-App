@@ -1,6 +1,6 @@
 
 .modal{
-    width: 60%;
+    width: 50%;
     /* height: 40%; */
     background: white;
     border-radius: 5px;
@@ -14,4 +14,22 @@
     z-index: 11;
 
     display: none;
+}
+
+@media (min-width: 1200px){
+    .modal{
+        width: 40%;
+    }
+}
+
+@media (min-width: 1400px){
+    .modal{
+        width: 30%;
+    }
+}
+
+@media (max-width: 767px){
+    .modal{
+        width: 60%;
+    }
 }

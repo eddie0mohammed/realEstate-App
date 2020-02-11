@@ -13,7 +13,7 @@ class Filter extends React.Component{
         maxSqm: 2000,
         floorSpace: 0,
         // minRadius: 0,
-        maxRadius: 1000,
+        maxRadius: 100,
         radius: 0,
 
 
@@ -149,7 +149,7 @@ class Filter extends React.Component{
                         </div>
 
                         <h4 className={styles.second__header}>Radius</h4>
-                        <input type="range" name="radius" className={styles.second__input} min='0' max={this.state.maxSqm} value={this.state.radius} onChange={this.handleChange}/>
+                        <input type="range" name="radius" className={styles.second__input} min='0' max={this.state.maxRadius} value={this.state.radius} onChange={this.handleChange}/>
                         <div className={styles.number__container}>
                             <p className={styles.price__start}>0 Km</p>
                             <p className={styles.price__end}>{this.state.radius} Km</p>

@@ -30,7 +30,7 @@ class About extends React.Component{
 
 
                 <div className={styles.btn__container}>
-                    <button className={styles.about__btn} onClick={() => this.props.history.push('/listings')}>Check Out Our Properties</button>
+                    <button className={styles.about__btn} onClick={() => this.props.history.push('/')}>Check Out Our Properties</button>
                 </div>
             </div>
         )

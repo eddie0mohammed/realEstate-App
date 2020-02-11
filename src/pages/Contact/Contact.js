@@ -87,7 +87,7 @@ class Contact extends React.Component{
                 </div>
 
                 <div className={styles.maps}>
-                    <iframe title="maps" className={styles.map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610504.290695561!2d143.93213755398625!3d-37.96508117696273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2smu!4v1580151894683!5m2!1sen!2smu" width="100%" height="100%" frameBorder="0"  ></iframe>
+                    <iframe title="maps" className={styles.map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6306.6152358076715!2d-122.42965718154514!3d37.78283003729461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808587390eb80c3b%3A0xe28c4482baad9163!2sRonny%20Budiutama!5e0!3m2!1sen!2smu!4v1581422069243!5m2!1sen!2smu" width="100%" height="100%" frameBorder="0"></iframe>
                 </div>
             </div> 
         )
