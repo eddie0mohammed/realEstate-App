@@ -14,3 +14,16 @@ The app consists of a filter functionality where users can search for specific p
 
 Also included, is a sort functionality where users can choose to view listings according to the date they were posted.
 
+Build with React.
+
+Features:
+
+CSS Animations,
+React-Router,
+Javascript
+SCRIPTS:
+
+Install
+npm install
+Start
+npm start
