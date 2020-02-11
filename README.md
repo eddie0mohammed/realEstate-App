@@ -18,12 +18,15 @@ Build with React.
 
 Features:
 
-CSS Animations,
-React-Router,
-Javascript
+- CSS Animations,
+- React-Router,
+- Javascript
+
+
 SCRIPTS:
 
-Install
-npm install
-Start
-npm start
+- Install
+  - npm install
+
+- Start
+ - npm start
