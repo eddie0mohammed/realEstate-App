@@ -28,9 +28,9 @@ class Sidebar extends React.Component{
 
                 <div className={styles.container}>
 
-                    <div className={styles.link} onClick={() => this.handleClick('/')}>Home</div>
+                    <div className={styles.link} onClick={() => this.handleClick('/home')}>Home</div>
                     <div className={styles.link} onClick={() => this.handleClick('/about')}>About</div>
-                    <div className={styles.link} onClick={() => this.handleClick('/listings')}>Listings</div>
+                    <div className={styles.link} onClick={() => this.handleClick('/')}>Listings</div>
                     <div className={styles.link} onClick={() => this.handleClick('/contact')}>Contact</div>
 
                     <button className={styles.btn}>Login / Register</button>
